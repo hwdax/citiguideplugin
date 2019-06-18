@@ -8,14 +8,14 @@
     <license>MIT</license>
 
     <keywords>cordova,android,citiguide</keywords>
-    <repo>https://github.com/hwdax/citiguideplugin/CitiGuidePlugin.git</repo>
+    <repo>https://github.com/hwdax/CitiGuidePlugin.git</repo>
     <issue>https://github.com/hwdax/citiguideplugin/issues</issue>
   
     <engines>
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
   
-    <js-module src="www/toastyplugin.js" name="citiguidePlugin">
+    <js-module src="www/citiguideplugin.js" name="citiguidePlugin">
         <clobbers target="window.plugins.citiguidePlugin" />
     </js-module>
     <platform name="android">
