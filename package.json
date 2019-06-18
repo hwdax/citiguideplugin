@@ -10,13 +10,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stanidesis/citiguideplugin.git"
+    "url": "git+https://github.com/hwdax/citiguideplugin.git"
   },
   "keywords": [
-    "Toast",
-    "Notification",
-    "Message",
-    "Alert",
+    "CitiGuid",
     "ecosystem:cordova",
     "cordova-android"
   ],
@@ -26,7 +23,7 @@
       "version": ">=3.0.0"
     }
   ],
-  "author": "Stanley Idesis <hwdax@gmail.com>",
+  "author": "HwDax <hwdax@gmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/hwdax/citiguideplugin/issues"
