@@ -10,10 +10,10 @@ CitiGuidePlugin.prototype.show = function(flat, flon, tlat, tlon, successCallbac
   options.tlat = tlat;
   options.tlon = tlon;
 
-  cordova.exec(successCallback, errorCallback, 'ToastyPlugin', 'show', [options]);
+  cordova.exec(successCallback, errorCallback, 'CitiGuidePlugin', 'show', [options]);
 }
 
-// Installation constructor that binds ToastyPlugin to window
+// Installation constructor that binds CitiGuidePlugin to window
 CitiGuidePlugin.install = function() {
   if (!window.plugins) {
     window.plugins = {};
