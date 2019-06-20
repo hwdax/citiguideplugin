@@ -17,6 +17,7 @@
   
     <js-module src="www/citiguideplugin.js" name="citiguidePlugin">
         <clobbers target="window.plugins.citiguidePlugin" />
+        <clobbers target="citiguidePlugin" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
