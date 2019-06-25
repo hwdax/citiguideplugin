@@ -35,10 +35,13 @@ public class CitiGuidePlugin extends CordovaPlugin {
   }  
 
 
-
-private PluginResult setAndroidPreferences(JSONArray jArray) {
+private PluginResult setAndroidPreferences(JSONArray args) {
 
       try {
+
+  JSONObject options = args.getJSONObject(0);
+        JSONArray jArray = options.getJSONArray("points");
+
 	String s=Integer.toString(jArray.length())+" ";
 
 for(int i=0; i<jArray.length(); i++){
@@ -62,7 +65,5 @@ for(int i=0; i<jArray.length(); i++){
 	PluginResult result = new PluginResult(PluginResult.Status.ERROR, "{'err':"+e.getMessage()+"}");
             return result;  
       }
-}
-
 
 }
