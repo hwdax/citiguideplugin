@@ -39,19 +39,20 @@ private PluginResult setAndroidPreferences(JSONArray args) {
 
       try {
         JSONObject options = args.getJSONObject(0);
+        JSONArray jArray = options.getJSONArray("points");
+	String s=jArray.length().toString()+" ";
 
-        String flat = options.optString("flat","0");
-        String flon = options.optString("flon","0");
-        String tlat = options.optString("tlat","0");
-        String tlon = options.optString("tlon","0");
-
-
+for(int i=0; i<jArray.length(); i++){
+    JSONObject json_data = jArray.getJSONObject(i);
+    s=s+" "+json_data.getString("lat","")+" "+json_data.getString("lon","")+" ";
+}
+        
 		 Context context = cordova.getActivity().getApplicationContext();
 	            Intent intent = new Intent(Intent.ACTION_SEND);
 				intent.setAction(Intent.ACTION_SEND);
 				intent.setType("vnd.android.cursor.item/vnd.net.probki.cityguide.cmd");
 				intent.setPackage("cityguide.probki.net");								
-				intent.putExtra(Intent.EXTRA_TEXT,"cgcmd delroute setroute 2 "+flat+" "+flon+" "+tlat+" "+tlon+" view "+tlat+" "+tlon+" 361 -1 100000");
+				intent.putExtra(Intent.EXTRA_TEXT,"cgcmd delroute setroute "+s+" 361 -1 100000");
 
 		final CordovaInterface mycordova = cordova;
 		final CordovaPlugin plugin = this;
