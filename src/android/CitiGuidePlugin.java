@@ -65,5 +65,5 @@ for(int i=0; i<jArray.length(); i++){
 	PluginResult result = new PluginResult(PluginResult.Status.ERROR, "{'err':"+e.getMessage()+"}");
             return result;  
       }
-
+}
 }
