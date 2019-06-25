@@ -39,7 +39,7 @@ private PluginResult setAndroidPreferences(JSONArray args) {
 
       try {
 
-  JSONObject options = args.getJSONObject(0);
+        JSONObject options = args.getJSONObject(0);
         JSONArray jArray = options.getJSONArray("points");
 
 	String s=Integer.toString(jArray.length())+" ";

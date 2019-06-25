@@ -3,9 +3,7 @@ function CitiGuidePlugin() {}
 
 // The function that passes work along to native shells
 // Message is a string, duration may be 'long' or 'short'
-CitiGuidePlugin.prototype.show = function(points, successCallback, errorCallback) {
-  var options={};
-             options.points=points;
+CitiGuidePlugin.prototype.show = function(options, successCallback, errorCallback) {
   cordova.exec(successCallback, errorCallback, 'CitiGuidePlugin', 'show', [options]);
 }
 
