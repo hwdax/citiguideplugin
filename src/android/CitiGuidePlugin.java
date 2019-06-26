@@ -44,7 +44,7 @@ private PluginResult setAndroidPreferences(JSONArray args) {
         JSONObject options = args.getJSONObject(0);
         JSONArray jArray = options.getJSONArray("points");
 
-	String s=Integer.toString(jArray.length())+" ";
+	String s=Integer.toString(jArray.length());
 
 for(int i=0; i<jArray.length(); i++){
     JSONObject json_data = jArray.getJSONObject(i);
